@@ -1,5 +1,52 @@
-node_modules/
+# Python virtual environments
+llm_venv/
+venv/
+
+# Python cache and compiled files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Environment and configuration files
 .env
+.python-version
+
+# Log files
+*.log
+currency_converter.log
+hybrid_rasa_llm.log
+rasa_train.log
+
+# Database files
+*.db
+exchange_rates.db
+query_history.db
+
+# Temporary test files
+*.wav
+test.wav
+test2.wav
+test5.wav
+test_piper_fixed.wav
+test_quickfix.wav
+test_cuda
+test_cuda.cu
+
+# Large model files
+en_US-lessac-medium.onnx
+en_US-lessac-medium.onnx.json
+llama.cpp/
+transformers/
+
+# Rasa generated models
 rasa-bot/models/
+
+# Node.js dependencies (if any)
+node_modules/
+
+# Stray files (likely artifacts)
+=0.0.2
+=0.0.347
+=0.1.28
+=1.66
