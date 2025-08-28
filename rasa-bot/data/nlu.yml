@@ -1,0 +1,193 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey there
+    - good morning
+    - start
+    - yo
+    - what's up
+    - hi bot
+    - hello there
+    - good afternoon
+    - hey
+    - bonjour
+    - hola
+    - aloha
+    - hi there
+- intent: inform_location
+  examples: |
+    - I want to travel to [Tokyo](location)
+    - Trip to [Paris](location)
+    - Going to [London](location)
+    - Plan a trip to [New York](location)
+    - Visit [Rome](location)
+    - Heading to [Sydney](location)
+    - Vacation in [Dubai](location)
+    - Traveling to [Berlin](location)
+    - I’m off to [Miami](location)
+    - Let's go to a village in [India](location)
+    - Explore [Tokyo](location)
+    - To a small town in [France](location)
+    - Journey to [Mumbai](location)
+    - Trip to a remote village in [Nepal](location)
+    - Going to Delhi countryside
+- intent: ask_weather
+  examples: |
+    - What's the weather in [Paris](location)?
+    - How's the weather in [Tokyo](location)?
+    - Weather forecast for [London](location)
+    - Is it raining in [New York](location)?
+    - Temperature in [Rome](location)
+    - What's the climate like in [Sydney](location)?
+    - How’s the weather in [Dubai](location) today?
+    - Weather in [Berlin](location) this week
+    - Forecast for a small town in [France](location)
+    - Weather conditions in [Mumbai](location)
+    - Is it hot in a village near [Delhi](location)?
+    - Weather in a rural area in [Italy](location)
+    - Forecast for [Sydney](location) suburbs
+    - Temperature in [Tokyo](location) tomorrow
+    - Rain chance in [London](location)
+- intent: ask_flights
+  examples: |
+    - Flights from [New York](from_location) to [Rome](to_location)
+    - Find flights to [Tokyo](to_location) from [London](from_location)
+    - Book a flight from [London](from_location) to [Paris](to_location)
+    - Flight options from [Chicago](from_location) to [Dubai](to_location)
+    - How much is a flight from [Sydney](from_location) to [Tokyo](to_location)?
+    - Flights from [Chicago](from_location) to [Miami](to_location)
+    - Any flights from [Berlin](from_location) to [Tokyo](to_location)?
+    - Cheap flights from [Paris](from_location) to [London](to_location)
+    - Flights from [Delhi](from_location) to a village near [Mumbai](to_location)
+    - International flights from [Miami](from_location) to [Tokyo](to_location)
+    - Flights from [Miami](from_location) to [Berlin](to_location)
+    - Round trip from [Paris](from_location) to [New York](to_location)
+    - Direct flights from [London](from_location) to [Dubai](to_location)
+    - Budget flights from [Sydney](from_location) to [London](to_location)
+    - Flights from [New York](from_location) to [Tokyo](to_location) next week
+    - Find me a flight from [Toronto](from_location) to [Rome](to_location)
+    - Cheapest flights from [Los Angeles](from_location) to [Paris](to_location)
+    - Flight from [Berlin](from_location) to [Sydney](to_location) tomorrow
+    - Book a flight to [Paris](to_location)
+    - I need a flight to [Paris](to_location)
+    - Travel to [Paris](to_location)
+    - Get me a flight to [Paris](to_location)
+    - Fly to [Paris](to_location)
+    - Book flight to [Paris](to_location)
+    - Find flights to [Paris](to_location)
+    - Flights to [Paris](to_location) please
+    - I want to fly to [Paris](to_location)
+    - Book a flight to [Paris](to_location) from anywhere
+    - Book flight from [Mumbai](from_location) to [Delhi](to_location)
+    - Flights to [Tokyo](to_location)
+- intent: ask_attractions
+  examples: |
+    - What to see in [London](location)?
+    - Top attractions in [Paris](location)
+    - Things to do in [Tokyo](location)
+    - Places to visit in [Rome](location)
+    - Tourist spots in [New York](location)
+    - What's famous in [Dubai](location)?
+    - Must-see places in [Sydney](location)
+    - Attractions in [Berlin](location)
+    - Sights in a small town in [Italy](location)
+    - Historical places in [Mumbai](location)
+    - Attractions in a village in [India](location)
+    - Tourist sites in a rural area in [France](location)
+    - What to do in [Miami](location) beach
+    - Famous landmarks in [Delhi](location)
+    - Adventure spots in [Sydney](location)
+- intent: ask_currency
+  examples: |
+    - How much is [500 USD](amount) in [EUR](currency_to)?
+    - Convert [100 GBP](amount) to [JPY](currency_to)
+    - What's [200 AUD](amount) in [USD](currency_to)?
+    - Currency conversion for [50 EUR](amount) to [CAD](currency_to)
+    - How many [JPY](currency_to) is [300 USD](amount)?
+    - Exchange rate for [GBP](currency_from) to [INR](currency_to)
+    - Convert [1000 CAD](amount) to [EUR](currency_to)
+    - What’s [50 USD](amount) in [AED](currency_to)?
+    - [100 INR](amount) to [USD](currency_to)
+    - Exchange [200 JPY](amount) to [GBP](currency_to)
+    - Convert [500 RUB](amount) to [USD](currency_to)
+    - [300 EUR](amount) to [AUD](currency_to)
+    - Exchange rate from [USD](currency_from) to [INR](currency_to)
+    - How much is [1000 MXN](amount) in [USD](currency_to)?
+    - Convert [50 GBP](amount) to [CAD](currency_to)
+    - [100 USD](amount) to [EUR](currency_to) exchange rate
+    - Convert [2000 INR](amount) from [INR](currency_from) to [USD](currency_to)
+    - How much is [500 EUR](amount) in [JPY](currency_to)?
+- intent: ask_time
+  examples: |
+    - What time is it in [Tokyo](location)?
+    - Current time in [Paris](location)
+    - Time zone for [London](location)
+    - What's the time in [New York](location)?
+    - Local time in [Dubai](location)
+    - Time in [Sydney](location) now
+    - What’s the time in [Berlin](location)?
+    - Time zone difference for [Miami](location)
+    - Time in a village in [India](location)
+    - What's the time in [Rome](location)?
+    - Time in a small town in [France](location)
+    - Current time in [Mumbai](location)
+    - Time zone for a rural area in [Italy](location)
+    - What time is it in [Delhi](location)?
+    - Local time in a village near [Sydney](location)
+- intent: affirm
+  examples: |
+    - Yes
+    - Yep
+    - Correct
+    - That's right
+    - Sure
+    - Okay
+    - Absolutely
+    - Yes please
+    - Indeed
+    - Yeah
+    - Affirmative
+    - Right on
+- intent: deny
+  examples: |
+    - No
+    - Nope
+    - Not that one
+    - Wrong
+    - No way
+    - Incorrect
+    - Not really
+    - No thanks
+    - Nah
+    - No, not
+    - Negative
+    - Not correct
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you
+    - Thanks, bye
+    - End chat
+    - Later
+    - Catch you later
+    - Farewell
+    - Thanks and bye
+    - Adios
+    - Bye bye
+    - So long
+- intent: nlu_fallback
+  examples: |
+    - What is the best time to visit Paris?
+    - Recommend a hotel in Tokyo
+    - Tell me about French cuisine
+    - How do I get a visa for India?
+    - What's the population of New York?
+    - Any festivals in Sydney this month?
+    - Compare costs between London and Paris
+    - Travel tips for a village in Nepal
+    - History of the Eiffel Tower
+    - Transportation options in Mumbai

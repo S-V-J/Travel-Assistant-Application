@@ -1,0 +1,31 @@
+version: "3.1"
+rules:
+  - rule: Greet and offer services
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: action_offer_services
+  - rule: Handle currency request
+    steps:
+      - intent: ask_currency
+      - action: action_provide_currency
+      - action: utter_offer_more
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - rule: Handle flight request with to_location
+    condition:
+      - slot_was_set:
+          - to_location: true
+    steps:
+      - intent: ask_flights
+      - action: action_confirm_location
+  - rule: Handle flight confirmation
+    condition:
+      - slot_was_set:
+          - to_location: true
+          - from_location: true
+    steps:
+      - action: action_provide_flights
+      - action: utter_offer_more

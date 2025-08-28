@@ -1,0 +1,86 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - inform_location
+  - ask_weather
+  - ask_flights
+  - ask_attractions
+  - ask_currency
+  - ask_time
+  - affirm
+  - deny
+  - nlu_fallback  # For arbitrary questions
+entities:
+  - location
+  - date
+  - from_location
+  - to_location
+  - amount
+  - currency_from
+  - currency_to
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+  date:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date
+  from_location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: from_location
+  to_location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: to_location
+  amount:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: amount
+  currency_from:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: currency_from
+  currency_to:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: currency_to
+responses:
+  utter_greet:
+    - text: "Hello! I'm your travel planning assistant. I can help with weather information, flight searches, tourist attractions, currency conversion, and time zones. Where would you like to explore?"
+  utter_ask_confirm_location:
+    - text: "Just to confirm, you mean {location}?"
+  utter_ask_new_location:
+    - text: "Sorry, let's try again. Which location would you like?"
+  utter_offer_more:
+    - text: "Would you like flights, attractions, or something else?"
+  utter_proactive_offer:
+    - text: "Based on the weather, here's some packing advice!"
+  utter_goodbye:
+    - text: "Safe travels! Goodbye."
+actions:
+  - action_confirm_location
+  - action_offer_services
+  - action_provide_weather
+  - action_provide_flights
+  - action_provide_attractions
+  - action_provide_currency
+  - action_provide_time
+  - action_llm_fallback

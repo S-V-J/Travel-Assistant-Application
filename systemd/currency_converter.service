@@ -1,0 +1,13 @@
+[Unit]
+Description=Currency Converter Background Service
+After=network.target
+
+[Service]
+ExecStart=/home/stjl0/livekit-travel-voice-assistant/llm_venv/bin/python /home/stjl0/livekit-travel-voice-assistant/currency_converter.py
+WorkingDirectory=/home/stjl0/livekit-travel-voice-assistant
+Restart=always
+User=stjl0
+Environment="PATH=/home/stjl0/livekit-travel-voice-assistant/llm_venv/bin"
+
+[Install]
+WantedBy=multi-user.target
