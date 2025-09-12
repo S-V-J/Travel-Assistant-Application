@@ -1,7 +1,0 @@
-{
-  "rule_only_slots": [
-    "from_location",
-    "to_location"
-  ],
-  "rule_only_loops": []
-}
