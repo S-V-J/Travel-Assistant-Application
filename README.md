@@ -3,9 +3,6 @@
 ## Overview
 A web-based "voice & chat" travel planning assistant using Rasa for dialogue, Llama LLM (via LangGraph) for fallback/tool-calling, LiveKit for voice (prep), Piper TTS/Whisper STT, and free APIs. Global coverage for weather, flights, attractions, currency, time. Auto-trains Rasa from query logs every 6 hours. Access via link for voice/text chat.
 
-## Tagline for Donation
-**"Fuel my passion for building innovative open-source tools like this – your donation keeps the journey going!"**
-
 ## Usage
 This repository is **public** for anyone to read, search, and use to build their own version of the `livekit-travel-voice-assistant` app. You can clone, fork, or download the code to explore or adapt it. However, **modification access** is restricted to collaborators explicitly invited by the owner (Siddhant Kumar). To contribute changes, fork the repo, make a pull request, or contact me for write access.
 
@@ -14,6 +11,7 @@ For collaboration, contract work, or to support this project:
 - **Phone**: +918095875948
 - **LinkedIn**: [linkedin.com/in/sid-093](https://linkedin.com/in/sid-093)
 - **Donate**: [PayPal Donation Link](https://www.paypal.com/ncp/payment/2J5NTJBYW2HL8)
+**"Fuel my passion for building innovative open-source tools like this – your donation keeps the journey going!"**
 
 ## Features
 - **Conversational**: Friendly, proactive (offers related info), context retention (slots/memory).
