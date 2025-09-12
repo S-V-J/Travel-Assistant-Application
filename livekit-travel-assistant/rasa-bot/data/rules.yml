@@ -1,0 +1,56 @@
+version: "3.1"
+rules:
+  - rule: Greet and offer services
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: action_offer_services
+  - rule: Handle currency request
+    steps:
+      - intent: ask_currency
+      - action: action_provide_currency
+      - action: utter_offer_more
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - rule: Handle flight request with to_location
+    condition:
+      - slot_was_set:
+          - to_location: true
+    steps:
+      - intent: ask_flights
+      - action: action_confirm_location
+  - rule: Handle flight confirmation
+    condition:
+      - slot_was_set:
+          - to_location: true
+          - from_location: true
+    steps:
+      - action: action_provide_flights
+      - action: utter_offer_more
+  - rule: Handle time request
+    steps:
+      - intent: ask_time
+      - action: action_provide_time
+      - action: utter_offer_more
+  - rule: Handle weather request
+    steps:
+      - intent: ask_weather
+      - action: action_provide_weather
+      - action: utter_offer_more
+  - rule: Handle attractions request
+    steps:
+      - intent: ask_attractions
+      - action: action_provide_attractions
+      - action: utter_offer_more
+  - rule: Handle fallback queries
+    steps:
+      - intent: nlu_fallback
+      - action: action_llm_fallback
+      - action: utter_offer_more
+  - rule: Handle currency rate update
+    steps:
+      - intent: update_currency
+      - action: action_update_currency
+      - action: utter_offer_more
