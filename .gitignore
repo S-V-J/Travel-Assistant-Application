@@ -1,6 +1,8 @@
-# Python virtual environments
-llm_venv/
+# Python virtual environments (full exclusion)
 venv/
+llm_venv/
+rasa-bot/rasa_venv/
+livekit-travel-assistant/rasa-bot/rasa_venv/  # Specific to integrated dir
 
 # Python cache and compiled files
 __pycache__/
@@ -33,14 +35,17 @@ test_quickfix.wav
 test_cuda
 test_cuda.cu
 
-# Large model files
+# Large model files and binaries
 en_US-lessac-medium.onnx
 en_US-lessac-medium.onnx.json
 llama.cpp/
 transformers/
+*.so  # Shared objects like libclang.so, libtensorflow_cc.so.2
+*.exe  # Any executables
 
-# Rasa generated models
+# Rasa generated models and caches
 rasa-bot/models/
+rasa-bot/.rasa/
 
 # Node.js dependencies (if any)
 node_modules/
@@ -51,5 +56,5 @@ node_modules/
 =0.1.28
 =1.66
 
-#backup folder
+# Backup folder
 backup/
