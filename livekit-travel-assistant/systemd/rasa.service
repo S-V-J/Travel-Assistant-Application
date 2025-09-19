@@ -1,15 +1,17 @@
 [Unit]
 Description=Rasa Server for Travel Voice Assistant
-After=network.target
+After=network.target rasa_actions.service currency_converter.service
 
 [Service]
 User=stjl0
 Group=stjl0
-WorkingDirectory=/home/stjl0/livekit-travel-voice-assistant/rasa-bot
-Environment="PATH=/home/stjl0/livekit-travel-voice-assistant/rasa-bot/rasa_venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+WorkingDirectory=/home/stjl0/Travel-Assistant-Application/livekit-travel-assistant/rasa-bot
+Environment="PATH=/home/stjl0/Travel-Assistant-Application/livekit-travel-assistant/rasa-bot/rasa_venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 Environment="SQLALCHEMY_SILENCE_UBER_WARNING=1"
-ExecStartPre=/bin/sleep 5
-ExecStart=/home/stjl0/livekit-travel-voice-assistant/rasa-bot/rasa_venv/bin/rasa run --enable-api -p 5005
+Environment="REQUESTS_CA_BUNDLE=/home/stjl0/Travel-Assistant-Application/livekit-travel-assistant/rasa-bot/rasa_venv/lib/python3.10/site-packages/certifi/cacert.pem"
+Environment="CURL_CA_BUNDLE=/home/stjl0/Travel-Assistant-Application/livekit-travel-assistant/rasa-bot/rasa_venv/lib/python3.10/site-packages/certifi/cacert.pem"
+ExecStartPre=/bin/sleep 10
+ExecStart=/home/stjl0/Travel-Assistant-Application/livekit-travel-assistant/rasa-bot/rasa_venv/bin/rasa run --enable-api --cors "*" -m models/20250918-112734-rosy-sprite.tar.gz
 Restart=always
 RestartSec=15
 
