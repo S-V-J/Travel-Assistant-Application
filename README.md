@@ -25,10 +25,6 @@ A production-ready web-based travel assistant combining **voice & chat interface
 - **Phase 9**: Docker + AWS production deployment
 - **Phase 10**: Comprehensive testing and optimization
 
-## Tagline for Donation
-
-**"Building the future of multilingual AI travel assistance – your support powers innovation!"**
-
 ## Usage & Collaboration
 
 This repository is **public** for learning, research, and building derivative works. The codebase is available under MIT license for cloning, forking, and adaptation. **Direct modification access** is restricted to invited collaborators.
@@ -37,7 +33,7 @@ This repository is **public** for learning, research, and building derivative wo
 - **Email**: [stjl093@gmail.com](mailto:stjl093@gmail.com)
 - **Phone**: +918095875948
 - **LinkedIn**: [linkedin.com/in/sid-093](https://linkedin.com/in/sid-093)
-- **Donate**: [PayPal Donation Link](https://www.paypal.com/ncp/payment/2J5NTJBYW2HL8)
+- **Donate**: [PayPal Donation Link](https://www.paypal.com/ncp/payment/2J5NTJBYW2HL8) **"Building the future of multilingual AI travel assistance – your support powers innovation!"**
 
 For collaboration, contract work, feature requests, or technical support, reach out via any channel above.
 
